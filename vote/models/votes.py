@@ -5,7 +5,7 @@ from .base_result import BaseResult
 
 
 class Votes(BaseResult):
-    """Popular vote results."""
+    """Popular votes."""
     candidate_election = models.ForeignKey(
         CandidateElection,
         null=True, blank=True, related_name="votes",

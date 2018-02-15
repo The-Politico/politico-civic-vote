@@ -1,6 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import os
+import sys
+
+import django
+
+sys.path.insert(0, os.path.abspath('../..'))
+
+os.environ['DJANGO_SETTINGS_MODULE'] = 'example.exampleapp.settings'
+django.setup()
 
 # -- General configuration ------------------------------------------------
 

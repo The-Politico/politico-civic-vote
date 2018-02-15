@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "257ae1d4f3f7da9bea2b92a01a2f213ec24ce977edacd52985b9bbb82fd99dfa"
+            "sha256": "b79ad0f8840bcf50f670ea12b3891a37876756ea2031d96bfdd6fcbfb3d19118"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -29,12 +29,26 @@
         ]
     },
     "default": {
+        "alabaster": {
+            "hashes": [
+                "sha256:2eef172f44e8d301d25aff8068fddd65f767a3f04b5f15b0f4922f113aa1c732",
+                "sha256:37cdcb9e9954ed60912ebc1ca12a9d12178c26637abdf124e3cde2341c257fe0"
+            ],
+            "version": "==0.7.10"
+        },
         "attrs": {
             "hashes": [
                 "sha256:a17a9573a6f475c99b551c0e0a812707ddda1ec9653bed04c13841404ed6f450",
                 "sha256:1c7960ccfd6a005cd9f7ba884e6316b5e430a3f1a6c37c5f87d8b43f83b54ec9"
             ],
             "version": "==17.4.0"
+        },
+        "babel": {
+            "hashes": [
+                "sha256:ad209a68d7162c4cff4b29cdebe3dec4cef75492df501b0049a9433c96ce6f80",
+                "sha256:8ce4cb6fdd4393edd323227cba3a077bceb2a6ce5201c902c65e730046f41f14"
+            ],
+            "version": "==2.5.3"
         },
         "boto3": {
             "hashes": [
@@ -84,6 +98,26 @@
                 "sha256:dc3b61d054f1bced64628c62025d480f655303aea9f408e5996c339a543b45f0"
             ],
             "version": "==2.0.2"
+        },
+        "django-politico-civic-election": {
+            "editable": true,
+            "git": "ssh://git@github.com/The-Politico/politico-civic-election",
+            "ref": "e8792f7f5917e32472855409fa0222bf40aa586d"
+        },
+        "django-politico-civic-entity": {
+            "editable": true,
+            "git": "ssh://git@github.com/The-Politico/politico-civic-entity",
+            "ref": "4c0ca5372f51e417e087c62d660cb806f0c13172"
+        },
+        "django-politico-civic-geography": {
+            "editable": true,
+            "git": "ssh://git@github.com/The-Politico/politico-civic-geography",
+            "ref": "32ef2ca355eb4f56c6a1d2316f81a25d84717ce1"
+        },
+        "django-politico-civic-government": {
+            "editable": true,
+            "git": "ssh://git@github.com/The-Politico/politico-civic-government",
+            "ref": "317276aabb5cc75570b60ebb947902e191b499b6"
         },
         "django-storages": {
             "hashes": [
@@ -150,12 +184,26 @@
             ],
             "version": "==2.6"
         },
+        "imagesize": {
+            "hashes": [
+                "sha256:6ebdc9e0ad188f9d1b2cdd9bc59cbe42bf931875e829e7a595e6b3abdc05cdfb",
+                "sha256:0ab2c62b87987e3252f89d30b7cedbec12a01af9274af9ffa48108f2c13c6062"
+            ],
+            "version": "==0.7.1"
+        },
         "jellyfish": {
             "hashes": [
                 "sha256:d0b22034df56d5faa34928457655722acf385d122da59c2cf7f4acd6bd49ea8b",
                 "sha256:887a9a49d0caee913a883c3e7eb185f6260ebe2137562365be422d1316bd39c9"
             ],
             "version": "==0.5.6"
+        },
+        "jinja2": {
+            "hashes": [
+                "sha256:74c935a1b8bb9a3947c50a54766a969d4846290e1e788ea44c1392163723c3bd",
+                "sha256:f84be1bb0040caca4cea721fcbbbbd61f9be9464ca236387158b0feea01914a4"
+            ],
+            "version": "==2.10"
         },
         "jmespath": {
             "hashes": [
@@ -164,12 +212,25 @@
             ],
             "version": "==0.9.3"
         },
+        "markupsafe": {
+            "hashes": [
+                "sha256:a6be69091dac236ea9c6bc7d012beab42010fa914c459791d627dad4910eb665"
+            ],
+            "version": "==1.0"
+        },
         "mccabe": {
             "hashes": [
                 "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42",
                 "sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f"
             ],
             "version": "==0.6.1"
+        },
+        "packaging": {
+            "hashes": [
+                "sha256:99276dc6e3a7851f32027a68f1095cd3f77c148091b092ea867a351811cfe388",
+                "sha256:5d50835fdf0a7edf0b55e311b7c887786504efea1177abd7e69329a8e5ea619e"
+            ],
+            "version": "==16.8"
         },
         "pillow": {
             "hashes": [
@@ -282,6 +343,25 @@
             ],
             "version": "==1.6.0"
         },
+        "pygments": {
+            "hashes": [
+                "sha256:78f3f434bcc5d6ee09020f92ba487f95ba50f1e3ef83ae96b9d5ffa1bab25c5d",
+                "sha256:dbae1046def0efb574852fab9e90209b23f556367b5a320c0bcb871c77c3e8cc"
+            ],
+            "version": "==2.2.0"
+        },
+        "pyparsing": {
+            "hashes": [
+                "sha256:fee43f17a9c4087e7ed1605bd6df994c6173c1e977d7ade7b651292fab2bd010",
+                "sha256:0832bcf47acd283788593e7a0f542407bd9550a55a8a8435214a1960e04bcb04",
+                "sha256:9e8143a3e15c13713506886badd96ca4b579a87fbdf49e550dbfc057d6cb218e",
+                "sha256:281683241b25fe9b80ec9d66017485f6deff1af5cde372469134b56ca8447a07",
+                "sha256:b8b3117ed9bdf45e14dcc89345ce638ec7e0e29b2b579fa1ecf32ce45ebac8a5",
+                "sha256:8f1e18d3fd36c6795bb7e02a39fd05c611ffc2596c1e0d995d34d67630426c18",
+                "sha256:e4d45427c6e20a59bf4f88c639dcc03ce30d193112047f94012102f235853a58"
+            ],
+            "version": "==2.2.0"
+        },
         "pyshp": {
             "hashes": [
                 "sha256:8dcd65e0aa2aa2951527ddb7339ea6e69023543d8a20a73fc51e2829b9ed6179"
@@ -343,6 +423,41 @@
                 "sha256:70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9"
             ],
             "version": "==1.11.0"
+        },
+        "snowballstemmer": {
+            "hashes": [
+                "sha256:9f3bcd3c401c3e862ec0ebe6d2c069ebc012ce142cce209c098ccb5b09136e89",
+                "sha256:919f26a68b2c17a7634da993d91339e288964f93c274f1343e3bbbe2096e1128"
+            ],
+            "version": "==1.2.1"
+        },
+        "sphinx": {
+            "hashes": [
+                "sha256:a0b16810d1d1413dec006ce2b08b5c895b2aaa7dce18d579d3ef79c03d461b22",
+                "sha256:278b7923f3f4ed2a1d1359f0ae94d89ac90ddd4189e8362f4b4d3baa2afe6b4a"
+            ],
+            "version": "==1.7.0"
+        },
+        "sphinx-rtd-theme": {
+            "hashes": [
+                "sha256:62ee4752716e698bad7de8a18906f42d33664128eea06c46b718fc7fbd1a9f5c",
+                "sha256:2df74b8ff6fae6965c527e97cca6c6c944886aae474b490e17f92adfbe843417"
+            ],
+            "version": "==0.2.4"
+        },
+        "sphinxcontrib-django": {
+            "hashes": [
+                "sha256:15ebcb61bcfbe5f432da4aa9cc7b8249638cde333458ba9ef252867090991a8d",
+                "sha256:88e00e36c171cdef486a666e25582887eb6c8c4f4b1fade6d5e8ec17fd32a189"
+            ],
+            "version": "==0.2.1"
+        },
+        "sphinxcontrib-websupport": {
+            "hashes": [
+                "sha256:f4932e95869599b89bf4f80fc3989132d83c9faa5bf633e7b5e0c25dffb75da2",
+                "sha256:7a85961326aa3a400cd4ad3c816d70ed6f7c740acd7ce5d78cd0a67825072eb9"
+            ],
+            "version": "==1.0.1"
         },
         "tqdm": {
             "hashes": [

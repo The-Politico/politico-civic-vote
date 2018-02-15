@@ -21,6 +21,8 @@ geography = {git = "ssh://git@github.com/The-Politico/politico-civic-geography",
 government = {git = "ssh://git@github.com/The-Politico/politico-civic-government", editable = true}
 election = {git = "ssh://git@github.com/The-Politico/politico-civic-election", editable = true}
 "vote" = {path = "./..", editable = true}
-
+"sphinx" = "*"
+"sphinx_rtd_theme" = "*"
+"sphinxcontrib-django" = "*"
 
 [dev-packages]

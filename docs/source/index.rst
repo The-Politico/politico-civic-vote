@@ -9,6 +9,7 @@ Welcome to django-politico-civic-vote's documentation!
 
    Why this? <why>
    Quickstart <quickstart>
+   Models <models>
 
 
 
