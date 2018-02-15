@@ -1,7 +1,15 @@
-from django.urls import path
+from django.urls import include, path
+from rest_framework import routers
 
-from .views import Home
+from .viewsets import DelegatesViewSet, ElectoralVotesViewSet, VotesViewSet
+
+router = routers.DefaultRouter()
+
+router.register(r'delegates', DelegatesViewSet)
+router.register(r'electoral-votes', ElectoralVotesViewSet)
+router.register(r'votes', VotesViewSet)
+
 
 urlpatterns = [
-    path('', Home.as_view(), name='vote-home'),
+    path('api/', include(router.urls)),
 ]

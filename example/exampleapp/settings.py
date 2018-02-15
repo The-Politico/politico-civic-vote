@@ -1,5 +1,7 @@
 import os
 
+import dj_database_url
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -17,6 +19,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'entity',
+    'geography',
+    'government',
+    'election',
     'vote',
 ]
 
@@ -93,10 +99,6 @@ STATIC_URL = '/static/'
 #########################
 # vote settings
 
-VOTE_SECRET_KEY = ''
-VOTE_AWS_ACCESS_KEY_ID = ''
-VOTE_AWS_SECRET_ACCESS_KEY = ''
-VOTE_AWS_REGION = ''
-VOTE_AWS_S3_BUCKET = ''
-VOTE_CLOUDFRONT_ALTERNATE_DOMAIN = ''
-VOTE_S3_UPLOAD_ROOT = ''
+VOTE_API_AUTHENTICATION_CLASS = 'rest_framework.authentication.BasicAuthentication'
+VOTE_API_PERMISSION_CLASS = 'rest_framework.permissions.IsAdminUser'
+VOTE_API_PAGINATION_CLASS = 'vote.pagination.ResultsPagination'

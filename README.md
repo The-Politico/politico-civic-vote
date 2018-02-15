@@ -1,13 +1,15 @@
 ![POLITICO](https://rawgithub.com/The-Politico/src/master/images/logo/badge.png)
 
-# vote
+# django-politico-civic-vote
+
+Votes. votes. votes. We got the votes.
 
 ### Quickstart
 
 1. Install the app.
 
   ```
-  $ pip install vote
+  $ pip install django-politico-civic-vote
   ```
 
 2. Add the app to your Django project and configure settings.
@@ -16,43 +18,32 @@
   INSTALLED_APPS = [
       # ...
       'rest_framework',
+      'entity',
+      'geography',
+      'government',
+      'election',
       'vote',
   ]
 
   #########################
   # vote settings
 
-  VOTE_SECRET_KEY = ''
-  VOTE_AWS_ACCESS_KEY_ID = ''
-  VOTE_AWS_SECRET_ACCESS_KEY = ''
-  VOTE_AWS_REGION = ''
-  VOTE_AWS_S3_BUCKET = ''
-  VOTE_CLOUDFRONT_ALTERNATE_DOMAIN = ''
-  VOTE_S3_UPLOAD_ROOT = ''
+  VOTE_API_AUTHENTICATION_CLASS = 'rest_framework.authentication.BasicAuthentication' # default
+  VOTE_API_PERMISSION_CLASS = 'rest_framework.permissions.IsAdminUser' # default
+  VOTE_API_PAGINATION_CLASS = 'vote.pagination.ResultsPagination' # default
   ```
+
 
 ### Developing
 
 ##### Running a development server
 
-Developing python files? Move into example directory and run the development server with pipenv.
+Move into the example directory, install dependencies and run the development server with pipenv.
 
   ```
   $ cd example
+  $ pipenv install
   $ pipenv run python manage.py runserver
-  ```
-
-Developing static assets? Move into the pluggable app's staticapp directory and start the node development server, which will automatically proxy Django's development server.
-
-  ```
-  $ cd vote/staticapp
-  $ gulp
-  ```
-
-Want to not worry about it? Use the shortcut make command.
-
-  ```
-  $ make dev
   ```
 
 ##### Setting up a PostgreSQL database
@@ -63,7 +54,7 @@ Want to not worry about it? Use the shortcut make command.
   $ make database
   ```
 
-2. Add a connection URL to the `.env` file.
+2. Add a connection URL to `example/.env`.
 
   ```
   DATABASE_URL="postgres://localhost:5432/vote"
