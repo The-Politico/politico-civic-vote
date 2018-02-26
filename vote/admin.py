@@ -5,7 +5,6 @@ from vote.models import Delegates, ElectoralVotes, Votes
 class VotesAdmin(admin.ModelAdmin):
     list_filter = (
         'candidate_election__election__division__level',
-        'candidate_election__election',
     )
 
 
