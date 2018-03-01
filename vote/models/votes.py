@@ -17,6 +17,7 @@ class Votes(BaseResult):
         on_delete=models.PROTECT
     )
     winning = models.BooleanField(default=False)
+    runoff = models.BooleanField(default=False)
 
     def __str__(self):
         return '{0} {1} {2}'.format(
