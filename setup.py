@@ -23,7 +23,16 @@ setup(
 
     packages=find_packages(exclude=['docs', 'tests']),
 
-    install_requires=[],
+    install_requires=[
+        'django',
+        'djangorestframework',
+        'dj-database-url',
+        'psycopg2',
+        'politico-civic-entity',
+        'politico-civic-geography',
+        'politico-civic-government',
+        'politico-civic-election'
+    ],
 
     extras_require={
         'test': ['pytest'],
