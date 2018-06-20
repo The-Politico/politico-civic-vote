@@ -4,9 +4,11 @@ url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
+
 [requires]
 
 python_version = "3.6"
+
 
 [packages]
 
@@ -14,15 +16,19 @@ pytest = "*"
 "flake8" = "*"
 django = ">=2.0"
 djangorestframework = "*"
-"dj-database-url" = "*"
+dj-database-url = "*"
 "psycopg2" = "*"
 entity = {git = "ssh://git@github.com/The-Politico/politico-civic-entity", editable = true}
 geography = {git = "ssh://git@github.com/The-Politico/politico-civic-geography", editable = true}
 government = {git = "ssh://git@github.com/The-Politico/politico-civic-government", editable = true}
 election = {git = "ssh://git@github.com/The-Politico/politico-civic-election", editable = true}
-"vote" = {path = "./..", editable = true}
-"sphinx" = "*"
-"sphinx_rtd_theme" = "*"
-"sphinxcontrib-django" = "*"
+vote = {path = "./..", editable = true}
+sphinx = "*"
+sphinx-rtd-theme = "*"
+sphinxcontrib-django = "*"
+politico-civic-government = "==0.1.1"
+politico-civic-election = "==0.1.2"
+
 
 [dev-packages]
+
