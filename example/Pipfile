@@ -1,17 +1,12 @@
 [[source]]
-
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
-
 [requires]
-
 python_version = "3.6"
 
-
 [packages]
-
 pytest = "*"
 "flake8" = "*"
 django = ">=2.0"
@@ -27,8 +22,6 @@ sphinx = "*"
 sphinx-rtd-theme = "*"
 sphinxcontrib-django = "*"
 politico-civic-government = "==0.1.1"
-politico-civic-election = "==0.1.2"
-
+politico-civic-election = "==0.2.0"
 
 [dev-packages]
-
