@@ -13,15 +13,13 @@ django = ">=2.0"
 djangorestframework = "*"
 dj-database-url = "*"
 "psycopg2" = "*"
-entity = {git = "ssh://git@github.com/The-Politico/politico-civic-entity", editable = true}
-geography = {git = "ssh://git@github.com/The-Politico/politico-civic-geography", editable = true}
-government = {git = "ssh://git@github.com/The-Politico/politico-civic-government", editable = true}
-election = {git = "ssh://git@github.com/The-Politico/politico-civic-election", editable = true}
+politico-civic-entity = "*"
+politico-civic-geography = "*"
+politico-civic-government = "*"
+politico-civic-election = "*"
 vote = {path = "./..", editable = true}
 sphinx = "*"
 sphinx-rtd-theme = "*"
 sphinxcontrib-django = "*"
-politico-civic-government = "==0.1.1"
-politico-civic-election = "==0.2.0"
 
 [dev-packages]
