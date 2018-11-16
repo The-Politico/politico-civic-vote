@@ -1,6 +1,6 @@
 ![POLITICO](https://rawgithub.com/The-Politico/src/master/images/logo/badge.png)
 
-# django-politico-civic-vote
+# politico-civic-vote
 
 Votes. votes. votes. We got the votes.
 
@@ -9,7 +9,7 @@ Votes. votes. votes. We got the votes.
 1. Install the app.
 
   ```
-  $ pip install django-politico-civic-vote
+  $ pip install politico-civic-vote
   ```
 
 2. Add the app to your Django project and configure settings.
@@ -24,15 +24,17 @@ Votes. votes. votes. We got the votes.
       'election',
       'vote',
   ]
-
-  #########################
-  # vote settings
-
-  VOTE_API_AUTHENTICATION_CLASS = 'rest_framework.authentication.BasicAuthentication' # default
-  VOTE_API_PERMISSION_CLASS = 'rest_framework.permissions.IsAdminUser' # default
-  VOTE_API_PAGINATION_CLASS = 'vote.pagination.ResultsPagination' # default
   ```
 
+### Bootstrapping your database
+
+1. Ensure `PROPUBLICA_CONGRESS_API_KEY` is exported into your environment. If you don't have an API key for the ProPublica Congress API, you can request one [here](https://www.propublica.org/datastore/api/propublica-congress-api).
+
+2. Bootstrap the database.
+
+```
+$ python manage.py bootstrap_vote
+```
 
 ### Developing
 
