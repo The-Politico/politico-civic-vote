@@ -1,7 +1,7 @@
+# Imports from vote.
 from vote.models import ElectoralVotes
 from vote.serializers import ElectoralVotesSerializer
-
-from .base import BaseViewSet
+from vote.viewsets.base import BaseViewSet
 
 
 class ElectoralVotesViewSet(BaseViewSet):
