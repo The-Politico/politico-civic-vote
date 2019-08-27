@@ -8,7 +8,6 @@ from django.utils.timezone import utc
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("election", "0002_auto_20190826_2035"),
         ("geography", "0002_point_pointlabeloffset"),
         ("vote", "0002_votes_runoff"),
     ]

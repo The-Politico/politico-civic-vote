@@ -10,55 +10,144 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('geography', '0001_initial'),
-        ('election', '0005_auto_20180206_2238'),
+        ("election", "0002_auto_20190826_2035"),
+        ("election", "0005_auto_20180206_2238"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Delegates',
+            name="Delegates",
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
-                ('count', models.PositiveIntegerField()),
-                ('pct', models.DecimalField(blank=True, decimal_places=3, max_digits=5, null=True)),
-                ('total', models.PositiveIntegerField(blank=True, null=True)),
-                ('superdelegates', models.BooleanField(default=False)),
-                ('candidate_election', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, related_name='delegates', to='election.CandidateElection')),
-                ('division', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='+', to='geography.Division')),
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        editable=False,
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ),
+                ("count", models.PositiveIntegerField()),
+                (
+                    "pct",
+                    models.DecimalField(
+                        blank=True, decimal_places=3, max_digits=5, null=True
+                    ),
+                ),
+                ("total", models.PositiveIntegerField(blank=True, null=True)),
+                ("superdelegates", models.BooleanField(default=False)),
+                (
+                    "candidate_election",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.PROTECT,
+                        related_name="delegates",
+                        to="election.CandidateElection",
+                    ),
+                ),
+                (
+                    "division",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.PROTECT,
+                        related_name="+",
+                        to="geography.Division",
+                    ),
+                ),
             ],
-            options={
-                'verbose_name_plural': 'Delegates',
-            },
+            options={"verbose_name_plural": "Delegates"},
         ),
         migrations.CreateModel(
-            name='ElectoralVotes',
+            name="ElectoralVotes",
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
-                ('count', models.PositiveIntegerField()),
-                ('pct', models.DecimalField(blank=True, decimal_places=3, max_digits=5, null=True)),
-                ('total', models.PositiveIntegerField(blank=True, null=True)),
-                ('winning', models.BooleanField(default=False)),
-                ('candidate_election', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, related_name='electoral_votes', to='election.CandidateElection')),
-                ('division', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='+', to='geography.Division')),
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        editable=False,
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ),
+                ("count", models.PositiveIntegerField()),
+                (
+                    "pct",
+                    models.DecimalField(
+                        blank=True, decimal_places=3, max_digits=5, null=True
+                    ),
+                ),
+                ("total", models.PositiveIntegerField(blank=True, null=True)),
+                ("winning", models.BooleanField(default=False)),
+                (
+                    "candidate_election",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.PROTECT,
+                        related_name="electoral_votes",
+                        to="election.CandidateElection",
+                    ),
+                ),
+                (
+                    "division",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.PROTECT,
+                        related_name="+",
+                        to="geography.Division",
+                    ),
+                ),
             ],
-            options={
-                'verbose_name_plural': 'Electoral Votes',
-            },
+            options={"verbose_name_plural": "Electoral Votes"},
         ),
         migrations.CreateModel(
-            name='Votes',
+            name="Votes",
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
-                ('count', models.PositiveIntegerField()),
-                ('pct', models.DecimalField(blank=True, decimal_places=3, max_digits=5, null=True)),
-                ('total', models.PositiveIntegerField(blank=True, null=True)),
-                ('winning', models.BooleanField(default=False)),
-                ('ballot_answer', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, to='election.BallotAnswer')),
-                ('candidate_election', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, related_name='votes', to='election.CandidateElection')),
-                ('division', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='+', to='geography.Division')),
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        editable=False,
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ),
+                ("count", models.PositiveIntegerField()),
+                (
+                    "pct",
+                    models.DecimalField(
+                        blank=True, decimal_places=3, max_digits=5, null=True
+                    ),
+                ),
+                ("total", models.PositiveIntegerField(blank=True, null=True)),
+                ("winning", models.BooleanField(default=False)),
+                (
+                    "ballot_answer",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.PROTECT,
+                        to="election.BallotAnswer",
+                    ),
+                ),
+                (
+                    "candidate_election",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.PROTECT,
+                        related_name="votes",
+                        to="election.CandidateElection",
+                    ),
+                ),
+                (
+                    "division",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.PROTECT,
+                        related_name="+",
+                        to="geography.Division",
+                    ),
+                ),
             ],
-            options={
-                'verbose_name_plural': 'Votes',
-            },
+            options={"verbose_name_plural": "Votes"},
         ),
     ]
