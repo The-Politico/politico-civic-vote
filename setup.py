@@ -48,7 +48,7 @@ setup(
         "django",
         "djangorestframework",
         "dj-database-url",
-        "psycopg2",
+        "psycopg2-binary",
         "politico-civic-entity",
         "politico-civic-geography",
         "politico-civic-government",
