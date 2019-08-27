@@ -7,13 +7,14 @@ from django.db import models
 
 
 # Imports from other dependencies.
+from civic_utils.models import CivicBaseModel
+from civic_utils.models import UUIDMixin
 from geography.models import Division
 
 
-class BaseResult(models.Model):
+class BaseResult(UUIDMixin, CivicBaseModel):
     """Abstract result class."""
 
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     division = models.ForeignKey(
         Division, related_name="+", on_delete=models.PROTECT
     )
