@@ -7,19 +7,21 @@ name = "pypi"
 python_version = "3.6"
 
 [packages]
-pytest = "*"
-"flake8" = "*"
-django = ">=2.0"
+Django = ">=2.2"
 djangorestframework = "*"
 dj-database-url = "*"
-"psycopg2" = "*"
-politico-civic-entity = "*"
-politico-civic-geography = "*"
-politico-civic-government = "*"
-politico-civic-election = "*"
+"psycopg2-binary" = "*"
+"politico-civic-utils" = "~=0.0.8"
+"politico-civic-entity" = {git = "ssh://git@github.com/The-Politico/politico-civic-entity", editable = true}
+"politico-civic-geography" = {git = "ssh://git@github.com/The-Politico/politico-civic-geography", editable = true}
+"politico-civic-government" = {git = "ssh://git@github.com/The-Politico/politico-civic-government", editable = true}
+"politico-civic-election" = {file = "https://github.com/The-Politico/politico-civic-election/archive/kangaroo/common-base-classes.tar.gz"}
 vote = {path = "./..", editable = true}
+
+[dev-packages]
+ipython = "*"
+pytest = "*"
+"flake8" = "*"
 sphinx = "*"
 sphinx-rtd-theme = "*"
 sphinxcontrib-django = "*"
-
-[dev-packages]
