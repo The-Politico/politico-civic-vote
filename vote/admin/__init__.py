@@ -1,6 +1,13 @@
+# Imports from Django.
 from django.contrib import admin
-from vote.models import Delegates, ElectoralVotes, Votes
-from .votes import VotesAdmin
+
+
+# Imports from vote.
+from vote.admin.votes import VotesAdmin
+from vote.models import Delegates
+from vote.models import ElectoralVotes
+from vote.models import Votes
+
 
 admin.site.register(Delegates)
 admin.site.register(ElectoralVotes)
