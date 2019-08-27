@@ -10,8 +10,8 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
+        ("geography", "0001_initial"),
         ("election", "0002_auto_20190826_2035"),
-        ("election", "0005_auto_20180206_2238"),
     ]
 
     operations = [
