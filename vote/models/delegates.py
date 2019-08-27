@@ -1,15 +1,24 @@
+# Imports from Django.
 from django.db import models
+
+
+# Imports from other dependencies.
 from election.models import CandidateElection
 
-from .base_result import BaseResult
+
+# Imports from vote.
+from vote.models.base_result import BaseResult
 
 
 class Delegates(BaseResult):
     """Pledged delegates."""
+
     candidate_election = models.ForeignKey(
         CandidateElection,
-        null=True, blank=True, related_name="delegates",
-        on_delete=models.PROTECT
+        null=True,
+        blank=True,
+        related_name="delegates",
+        on_delete=models.PROTECT,
     )
     superdelegates = models.BooleanField(default=False)
 
