@@ -8,73 +8,93 @@ from django.utils.timezone import utc
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('election', '0007_electionevent'),
-        ('geography', '0002_point_pointlabeloffset'),
-        ('vote', '0002_votes_runoff'),
+        ("election", "0002_auto_20190826_2035"),
+        ("geography", "0002_point_pointlabeloffset"),
+        ("vote", "0002_votes_runoff"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='delegates',
-            name='created',
-            field=models.DateTimeField(default=datetime.datetime(2019, 1, 1, 0, 0, tzinfo=utc), editable=False),
+            model_name="delegates",
+            name="created",
+            field=models.DateTimeField(
+                default=datetime.datetime(2019, 1, 1, 0, 0, tzinfo=utc),
+                editable=False,
+            ),
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='delegates',
-            name='uid',
+            model_name="delegates",
+            name="uid",
             field=models.CharField(blank=True, editable=False, max_length=500),
         ),
         migrations.AddField(
-            model_name='delegates',
-            name='updated',
-            field=models.DateTimeField(default=datetime.datetime(2019, 1, 1, 0, 0, tzinfo=utc), editable=False),
+            model_name="delegates",
+            name="updated",
+            field=models.DateTimeField(
+                default=datetime.datetime(2019, 1, 1, 0, 0, tzinfo=utc),
+                editable=False,
+            ),
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='electoralvotes',
-            name='created',
-            field=models.DateTimeField(default=datetime.datetime(2019, 1, 1, 0, 0, tzinfo=utc), editable=False),
+            model_name="electoralvotes",
+            name="created",
+            field=models.DateTimeField(
+                default=datetime.datetime(2019, 1, 1, 0, 0, tzinfo=utc),
+                editable=False,
+            ),
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='electoralvotes',
-            name='uid',
+            model_name="electoralvotes",
+            name="uid",
             field=models.CharField(blank=True, editable=False, max_length=500),
         ),
         migrations.AddField(
-            model_name='electoralvotes',
-            name='updated',
-            field=models.DateTimeField(default=datetime.datetime(2019, 1, 1, 0, 0, tzinfo=utc), editable=False),
+            model_name="electoralvotes",
+            name="updated",
+            field=models.DateTimeField(
+                default=datetime.datetime(2019, 1, 1, 0, 0, tzinfo=utc),
+                editable=False,
+            ),
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='votes',
-            name='created',
-            field=models.DateTimeField(default=datetime.datetime(2019, 1, 1, 0, 0, tzinfo=utc), editable=False),
+            model_name="votes",
+            name="created",
+            field=models.DateTimeField(
+                default=datetime.datetime(2019, 1, 1, 0, 0, tzinfo=utc),
+                editable=False,
+            ),
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='votes',
-            name='uid',
+            model_name="votes",
+            name="uid",
             field=models.CharField(blank=True, editable=False, max_length=500),
         ),
         migrations.AddField(
-            model_name='votes',
-            name='updated',
-            field=models.DateTimeField(default=datetime.datetime(2019, 1, 1, 0, 0, tzinfo=utc), editable=False),
+            model_name="votes",
+            name="updated",
+            field=models.DateTimeField(
+                default=datetime.datetime(2019, 1, 1, 0, 0, tzinfo=utc),
+                editable=False,
+            ),
             preserve_default=False,
         ),
         migrations.AlterUniqueTogether(
-            name='delegates',
-            unique_together={('candidate_election', 'division')},
+            name="delegates",
+            unique_together={("candidate_election", "division")},
         ),
         migrations.AlterUniqueTogether(
-            name='electoralvotes',
-            unique_together={('candidate_election', 'division')},
+            name="electoralvotes",
+            unique_together={("candidate_election", "division")},
         ),
         migrations.AlterUniqueTogether(
-            name='votes',
-            unique_together={('ballot_answer', 'candidate_election', 'division')},
+            name="votes",
+            unique_together={
+                ("ballot_answer", "candidate_election", "division")
+            },
         ),
     ]
