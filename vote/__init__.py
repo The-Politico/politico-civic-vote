@@ -1,3 +1,3 @@
-__version__ = (0, 2, 0)
+__version__ = (1, "0a1", "dev1")
 
 default_app_config = "vote.apps.VoteConfig"
