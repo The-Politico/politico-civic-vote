@@ -6,16 +6,19 @@ name = "pypi"
 [requires]
 python_version = "3.6"
 
+[pipenv]
+allow_prereleases = true
+
 [packages]
 Django = ">=2.2"
 djangorestframework = "*"
 dj-database-url = "*"
 "psycopg2-binary" = "*"
-"politico-civic-utils" = "~=0.0.8"
-"politico-civic-entity" = {git = "ssh://git@github.com/The-Politico/politico-civic-entity", editable = true}
-"politico-civic-geography" = {git = "ssh://git@github.com/The-Politico/politico-civic-geography", editable = true}
-"politico-civic-government" = {git = "ssh://git@github.com/The-Politico/politico-civic-government", editable = true}
-"politico-civic-election" = {file = "https://github.com/The-Politico/politico-civic-election/archive/kangaroo/common-base-classes.tar.gz"}
+"politico-civic-utils" = "~=1.0a1.dev1"
+"politico-civic-entity" = "~=1.0a1.dev1"
+"politico-civic-geography" = "~=1.0a1.dev1"
+"politico-civic-government" = "~=1.0a1.dev1"
+"politico-civic-election" = "~=1.0a1.dev1"
 vote = {path = "./..", editable = true}
 
 [dev-packages]

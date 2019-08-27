@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "2def5f2925c08b64893f2b2ea52fd14ac6dfc65258be82a5bc18999881e7f998"
+            "sha256": "5c44945c729b716c11ff29107d8a3d995ab7cb54f8269c77b6cae86c2ae2f945"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -190,33 +190,43 @@
         },
         "politico-civic-election": {
             "hashes": [
-                "sha256:003f9c2c7e9787bc17bb696a377958c678162053a5b8cf8731985bb503610a69",
-                "sha256:40cca05247926e91d27d5493dc191151bbe5c1135bc546395e5e7ae12eddd0ff"
+                "sha256:99122f5b6239d57416818076cdbfd9fae3eac97be343d09f481e86840f0b399b",
+                "sha256:e06177fc8c18f0272548f4b86935d35b00706a185df020abd7d3c2df52ed750e"
             ],
-            "version": "==0.3.3"
+            "index": "pypi",
+            "version": "==1.0a1.dev1"
         },
         "politico-civic-entity": {
-            "editable": true,
-            "git": "ssh://git@github.com/The-Politico/politico-civic-entity",
-            "ref": "b64f477f2a008c528937d6dbfe19f48c20b0722e"
+            "hashes": [
+                "sha256:31316cc732d1334ed315baecff86e164aab32402c82d03f6e7cdd387d4741d97",
+                "sha256:5889d2b4b83803ec4d31f67a82da6b682f4969bc20126d5488c1b696562dce6a"
+            ],
+            "index": "pypi",
+            "version": "==1.0a1.dev1"
         },
         "politico-civic-geography": {
-            "editable": true,
-            "git": "ssh://git@github.com/The-Politico/politico-civic-geography",
-            "ref": "032b3ee773b50b65cfe672f230dda772df0f89e0"
+            "hashes": [
+                "sha256:c388b0808c35078c49729b0a5bd6c29be902448661c51f528584d285c2ce06ea",
+                "sha256:d05da3a452f2391a6f36aa419136dfaba719b9b48a44fb655042c2a645eae446"
+            ],
+            "index": "pypi",
+            "version": "==1.0a1.dev1"
         },
         "politico-civic-government": {
-            "editable": true,
-            "git": "ssh://git@github.com/The-Politico/politico-civic-government",
-            "ref": "623baf95e1b029c3bbfccf300cdfca630f4969f8"
+            "hashes": [
+                "sha256:7b805e98c385eb2e2de566075ad488b3ec87ff61911f8ae933eb57a6223adf23",
+                "sha256:882772933d69d7d992a81f2dfc50856ad019767981b3fa56b015676eaa8e7557"
+            ],
+            "index": "pypi",
+            "version": "==1.0a1.dev1"
         },
         "politico-civic-utils": {
             "hashes": [
-                "sha256:0874565130ff797345dcedfc8eb9dff7553bbfa90ce0a4197fe0267986586101",
-                "sha256:dc66227de74eff221766bb17f9c81783c731f0da7caecd1f4a3e07d9338563e2"
+                "sha256:161848f03396e29e4ad13b0b3de82476547e7593a38bc2a01941592a43161b26",
+                "sha256:cf25e48fa9ffd43cbe51e4fe52bf141690bffc24ad57db9532f31d96f707370c"
             ],
             "index": "pypi",
-            "version": "==0.0.8"
+            "version": "==1.0a1.dev1"
         },
         "progress": {
             "hashes": [
@@ -323,20 +333,19 @@
         },
         "shapely": {
             "hashes": [
-                "sha256:0378964902f89b8dbc332e5bdfa08e0bc2f7ab39fecaeb17fbb2a7699a44fe71",
-                "sha256:34e7c6f41fb27906ccdf2514ee44a5774b90b39a256b6511a6a57d11ffe64999",
-                "sha256:3ca69d4b12e2b05b549465822744b6a3a1095d8488cc27b2728a06d3c07d0eee",
-                "sha256:3e9388f29bd81fcd4fa5c35125e1fbd4975ee36971a87a90c093f032d0e9de24",
-                "sha256:3ef28e3f20a1c37f5b99ea8cf8dcb58e2f1a8762d65ed2d21fd92bf1d4811182",
-                "sha256:523c94403047eb6cacd7fc1863ebef06e26c04d8a4e7f8f182d49cd206fe787e",
-                "sha256:5d22a1a705c2f70f61ccadc696e33d922c1a92e00df8e1d58a6ade14dd7e3b4f",
-                "sha256:714b6680215554731389a1bbdae4cec61741aa4726921fa2b2b96a6f578a2534",
-                "sha256:7dfe1528650c3f0dc82f41a74cf4f72018288db9bfb75dcd08f6f04233ec7e78",
-                "sha256:ba58b21b9cf3c33725f7f530febff9ed6a6846f9d0bf8a120fc74683ff919f89",
-                "sha256:c4b87bb61fc3de59fc1f85e71a79b0c709dc68364d9584473697aad4aa13240f",
-                "sha256:ebb4d2bee7fac3f6c891fcdafaa17f72ab9c6480f6d00de0b2dc9a5137dfe342"
+                "sha256:0acc128a75085ceb8d06ff1f977c0543b066318588b9efee4c0058969c294ddf",
+                "sha256:2482052bf690abf07429ae080ce98992c9ffca61ae9d1625abb75ef1dc537ad0",
+                "sha256:2a5cd243945e1a9ba4659804c0d626cc59f8434d9d86652a2f00554d7657914e",
+                "sha256:3e2d7a4f273942542faa1984c2f078250eece2a82e70d0c71252f26d3d2cc203",
+                "sha256:5e3760ca3614181e0c8ce2f98b371392a86078fba40431c8c3696d36ea4184ec",
+                "sha256:61070b237faf24e87ecc15549d8ca00c216273a03a83f1e5a5704a77a16517c5",
+                "sha256:66aab79043fbf176f09e53c6fd9939d61a23ca97ed010722b95957025437f474",
+                "sha256:673b61161c8e396a569eabf67cbaf63628f13848ea7f7103a260fd19a4da154c",
+                "sha256:911284f46bd7e449ae77ef6e7a97b2f9acca48f683265608fc2e0bf937d864bb",
+                "sha256:d215b086761c86117e605429452af0875149bf61cbc7e3cc62f490e65aba9600",
+                "sha256:d90f957f8643045b24f8953ec6a1f1edfca4baf359338b027e5976f3796746b2"
             ],
-            "version": "==1.6.4.post2"
+            "version": "==1.7a2"
         },
         "six": {
             "hashes": [
