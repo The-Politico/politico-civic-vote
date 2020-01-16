@@ -7,24 +7,24 @@ from django import forms
 from election.models import CandidateElection
 
 
-class CustomModelChoiceField(forms.ModelChoiceField):
-    def label_from_instance(self, obj):
-        return "{} ({}): {} {}".format(
-            obj.candidate.person.full_name,
-            obj.candidate.party.ap_code,
-            obj.race.label,
-            obj.election_type.label,
-        )
-
-
-class VotesAdminForm(forms.ModelForm):
-    candidate_election = CustomModelChoiceField(
-        queryset=CandidateElection.objects.all(), required=False
-    )
+# class CustomModelChoiceField(forms.ModelChoiceField):
+#     def label_from_instance(self, obj):
+#         return "{} ({}): {} {}".format(
+#             obj.candidate.person.full_name,
+#             obj.candidate.party.ap_code,
+#             obj.race.label,
+#             obj.election_type.label,
+#         )
+#
+#
+# class VotesAdminForm(forms.ModelForm):
+#     candidate_election = CustomModelChoiceField(
+#         queryset=CandidateElection.objects.all(), required=False
+#     )
 
 
 class VotesAdmin(admin.ModelAdmin):
-    form = VotesAdminForm
+    # form = VotesAdminForm
     list_display = (
         "candidate",
         "party",
@@ -39,19 +39,55 @@ class VotesAdmin(admin.ModelAdmin):
     list_editable = ("count", "pct", "winning", "runoff")
     list_filter = (
         "division__level__name",
-        "candidate_election__election__election_day__date",
+        "__".join(
+            [
+                "candidate_election",
+                "election",
+                "election_ballot",
+                "election_event",
+                "election_day",
+                "date",
+            ]
+        ),
     )
     ordering = (
-        "-candidate_election__election__election_day__date",
+        "__".join(
+            [
+                "-candidate_election",
+                "election",
+                "election_ballot",
+                "election_event",
+                "election_day",
+                "date",
+            ]
+        ),
         "division__label",
-        "candidate_election__election__party__label",
+        "candidate_election__election__election_ballot__party__label",
         "count",
         "candidate_election__candidate__person__last_name",
     )
     search_fields = (
         "candidate_election__election__race__label",
-        "candidate_election__election__election_day__date",
-        "candidate_election__election__election_day__slug",
+        "__".join(
+            [
+                "candidate_election",
+                "election",
+                "election_ballot",
+                "election_event",
+                "election_day",
+                "date",
+            ]
+        ),
+        "__".join(
+            [
+                "candidate_election",
+                "election",
+                "election_ballot",
+                "election_event",
+                "election_day",
+                "slug",
+            ]
+        ),
         "division__label",
         "candidate_election__candidate__person__last_name",
     )
@@ -76,7 +112,8 @@ class VotesAdmin(admin.ModelAdmin):
         return obj.candidate_election.election.race.office
 
     def election_date(self, obj):
-        return obj.candidate_election.election.election_day.date
+        elex_ballot = obj.candidate_election.election.election_ballot
+        return elex_ballot.election_event.election_day.date
 
     def party(self, obj):
         return obj.candidate_election.candidate.party
